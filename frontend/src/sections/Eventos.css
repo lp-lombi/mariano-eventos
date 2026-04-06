@@ -1,0 +1,30 @@
+.event-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.event-list__item {
+  border: 1px solid
+    color-mix(in srgb, var(--color-text) 10%, var(--color-surface));
+  border-radius: 12px;
+  background: var(--color-surface);
+  padding: 16px;
+}
+
+.event-list__name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.event-list__description {
+  margin: 6px 0 0;
+  color: var(--color-text-muted);
+}
+
+.event-list__price {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,29 @@
+.quienes {
+  background: var(--color-surface);
+  min-height: 100dvh;
+}
+
+.quienes .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.quienes__text-block {
+  margin-top: 18px;
+  max-width: 900px;
+}
+
+.quienes__text {
+  margin: 0 0 12px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.quienes__text:last-child {
+  margin-bottom: 0;
+}
+
+.quienes .testimonios {
+  margin-top: 3rem;
+}

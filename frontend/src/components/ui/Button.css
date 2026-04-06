@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.button--primary:hover {
+  background: color-mix(in srgb, var(--color-primary) 78%, black);
+}

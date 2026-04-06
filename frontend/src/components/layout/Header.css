@@ -1,0 +1,38 @@
+.header {
+  background: var(--color-surface);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-text) 10%, var(--color-surface));
+}
+
+.header__inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__brand {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+.header__cta {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.header__cta.contacto {
+  font-weight: 700;
+}
+
+.header__cta:hover {
+  color: color-mix(in srgb, var(--color-primary) 78%, black);
+}

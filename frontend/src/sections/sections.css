@@ -1,0 +1,36 @@
+.section {
+  padding: 48px 0;
+}
+
+.section--soft {
+  background: var(--color-bg-soft);
+}
+
+.section__header {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.section__eyebrow {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.section__title {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.15;
+}
+
+.section__intro {
+  margin: 0;
+  max-width: 760px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}

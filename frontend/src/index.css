@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f8fafc;
+  --color-bg-soft: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #695547;
+  --color-primary: #e59b46;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font: inherit;
+  cursor: pointer;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: 0;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(14, 14, 27, 0.3);
+}
+
+button:hover {
+  background: color-mix(in srgb, var(--color-primary) 78%, rgb(255, 255, 255));
+}

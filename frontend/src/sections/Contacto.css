@@ -1,0 +1,98 @@
+#contacto input {
+  width: 100%;
+}
+
+.contact__form {
+  width: 100%;
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  border: 1px solid
+    color-mix(in srgb, var(--color-text) 16%, var(--color-surface));
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+  resize: none !important;
+}
+
+.contact__textarea {
+  resize: vertical;
+}
+
+.contact__file {
+  font: inherit;
+}
+
+.contact__file-wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.contact__file-input {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.contact__file-button {
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid
+    color-mix(in srgb, var(--color-text) 16%, var(--color-surface));
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact__file-button:hover {
+  background: var(--color-bg);
+}
+
+.contact__file-help {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.contact__social {
+  margin-top: 2.5rem;
+}
+
+.contact__social ul {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__social li {
+  list-style: none;
+  font-size: 1.25rem;
+  margin-right: 16px;
+}
+
+.contact__social-icon {
+  margin-right: 8px;
+  scale: 1.5;
+}
+
+.contact__social a {
+  color: var(--color-text);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
