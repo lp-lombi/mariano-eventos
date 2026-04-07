@@ -1,38 +1,42 @@
 .header {
-  background: var(--color-surface);
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--color-text) 10%, var(--color-surface));
-}
-
-.header__inner {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__brand {
-  margin: 0;
+  background-color: var(--color-primary);
+  color: white;
   font-size: 1.1rem;
-  font-weight: 700;
 }
 
-.header__buttons {
+.header> :first-child {
   display: flex;
-  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.header__cta {
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: var(--color-primary);
+.header__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.header__name span:first-child {
+  font-size: 2rem;
+}
+
+.header__links {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.header a {
+  color: white;
   font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
 }
 
-.header__cta.contacto {
-  font-weight: 700;
-}
-
-.header__cta:hover {
-  color: color-mix(in srgb, var(--color-primary) 78%, black);
+.header__link__contacto {
+  font-weight: 700 !important;
+  margin-left: 50px;
 }

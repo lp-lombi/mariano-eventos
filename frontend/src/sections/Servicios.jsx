@@ -14,19 +14,26 @@ const stockImages = [catering, servicio, limpieza, evento1, evento2];
 const servicios = [
   {
     title: "Catering",
-    text: "Menú simple y rico para reuniones y celebraciones.",
+    text: "Te ofrecemos un menú rico y personalizado para tu evento. Contamos con opciones para todos los gustos y necesidades.",
     chips: ["Bocados", "Mesa dulce", "Brunch"],
     images: stockImages,
   },
   {
     title: "Atención a las mesas",
-    text: "Servicio profesional para que no tengas que preocuparte por nada.",
+    text: "Nuestro equipo se encarga de servir y atender a tus invitados durante el evento, para que vos puedas disfrutar sin preocupaciones.",
     chips: ["Meseros", "Coordinación", "Servicio cálido"],
     images: stockImages,
   },
   {
+    title: "Delivery y montaje",
+    text: "Nos encargamos de llevar todo lo necesario para tu evento y montarlo en el lugar donde lo necesites. ",
+    chips: ["Transporte", "Montaje", "Desmontaje"],
+    images: stockImages,
+  }
+  ,
+  {
     title: "Limpieza final",
-    text: "Dejamos el espacio limpio y ordenado al terminar.",
+    text: "Nos encargamos de dejar el lugar impecable después de tu evento, para que no tengas que preocuparte por nada.",
     chips: ["Retiro", "Orden", "Cierre rápido"],
     images: stockImages,
   },
