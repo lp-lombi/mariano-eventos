@@ -17,12 +17,12 @@
   align-items: center;
   font-size: 1.2rem;
   font-weight: 100;
+  font-family: Cafetalk;
 }
 
 .header__name span:first-child {
   font-size: 2rem;
 }
-
 .header__links {
   display: flex;
   gap: 50px;
@@ -34,8 +34,21 @@
   font-weight: 600;
   text-decoration: none;
   padding: 10px;
+  transition: all .5s ease;
+  text-decoration: underline;
+  text-decoration-inset: 200px;
+  text-underline-offset: 8px;
 }
 
+.header a:hover {
+  color: var(--color-secondary);
+  border-radius: 8px;
+  text-decoration-thickness: 2px;
+  text-decoration-inset: -20px;
+
+
+  transition: all .5s ease;
+}
 .header__link__contacto {
   font-weight: 700 !important;
   margin-left: 50px;

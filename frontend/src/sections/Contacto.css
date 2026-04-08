@@ -9,20 +9,7 @@
   gap: 12px;
 }
 
-.contact__input,
-.contact__textarea {
-  width: 100%;
-  border: 1px solid
-    color-mix(in srgb, var(--color-text) 16%, var(--color-surface));
-  border-radius: 8px;
-  padding: 10px;
-  font: inherit;
-  resize: none !important;
-}
 
-.contact__textarea {
-  resize: vertical;
-}
 
 .contact__file {
   font: inherit;

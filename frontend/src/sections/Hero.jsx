@@ -1,55 +1,94 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import catering1 from "../assets/stock/catering1.png";
+import catering2 from "../assets/stock/catering2.jpg";
+import catering3 from "../assets/stock/catering3.jpg";
+import servicio1 from "../assets/stock/servicio1.png";
 import Container from "../components/layout/Container";
-import cateringImg from "../assets/stock/catering.png";
-import evento1Img from "../assets/stock/evento1.png";
-import evento2Img from "../assets/stock/evento2.png";
-import limpiezaImg from "../assets/stock/limpieza.png";
-import servicioImg from "../assets/stock/servicio.png";
 import "./sections.css";
 import "./Hero.css";
 
-const heroImages = [
-  cateringImg,
-  evento1Img,
-  evento2Img,
-  limpiezaImg,
-  servicioImg,
-];
+const heroMessages = [
+  {
+    title: "Nosotros organizamos tu evento, vos disfrutás",
+    badge: "Hasta 50 personas",
+    image: catering1
+  },
+  {
+    title: "Catering, montaje, atención y limpieza final",
+    badge: "Servicio integral",
+    image: servicio1
+  },
+  {
+    title: "El mejor servicio en CABA",
+    badge: "Experiencia garantizada",
+    image: catering3
+  }
+]
 
 function Hero() {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [incomingIndex, setIncomingIndex] = useState(null);
+  const currentIndexRef = useRef(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    let cycleTimeoutId;
+    let promoteTimeoutId;
 
-    return () => clearInterval(intervalId);
+    const scheduleNextTransition = () => {
+      cycleTimeoutId = window.setTimeout(() => {
+        const nextIndex = (currentIndexRef.current + 1) % heroMessages.length;
+
+        setIncomingIndex(nextIndex);
+
+        promoteTimeoutId = window.setTimeout(() => {
+          setCurrentIndex(nextIndex);
+          currentIndexRef.current = nextIndex;
+          setIncomingIndex(null);
+          scheduleNextTransition();
+        }, 1000);
+      }, 5000);
+    };
+
+    scheduleNextTransition();
+
+    return () => {
+      window.clearTimeout(cycleTimeoutId);
+      window.clearTimeout(promoteTimeoutId);
+    };
   }, []);
 
+  const current = heroMessages[currentIndex];
+  const incoming = incomingIndex !== null ? heroMessages[incomingIndex] : null;
+
   return (
-    <section
-      className="hero"
-      style={{
-        backgroundImage: `url(${heroImages[currentImage]})`,
-      }}
-    >
+    <section className="hero">
+      <div className="hero__background" aria-hidden="true">
+        <div
+          className="hero__background-layer hero__background-layer--current"
+          style={{
+            backgroundImage: `url(${current.image})`,
+          }}
+        />
+        {incoming !== null ? (
+          <div
+            className="hero__background-layer hero__background-layer--incoming"
+            style={{
+              backgroundImage: `url(${incoming.image})`,
+            }}
+          />
+        ) : null}
+      </div>
       <Container>
-        <div className="hero__content">
-          <span className="hero__badge">Hasta 50 personas</span>
+        <div className={`hero__content ${incomingIndex !== null ? 'hero__content--transitioning' : ''}`}>
+          <span className="hero__badge">{current.badge}</span>
           <h1 className="hero__title">
-            Eventos completos en tu casa, sin estrés.
+            {current.title}
           </h1>
-          <p className="hero__text">
-            El mejor servicio en CABA. Catering, servicio a domicilio, montaje y
-            limpieza final para que disfrutes tu evento sin preocuparte por
-            nada.
-          </p>
-          <div className="hero__actions">
-            <a href="#contacto">
-              <button>Solicitar presupuesto</button>
-            </a>
-          </div>
+        </div>
+        <div className="hero__actions">
+          <a href="#contacto">
+            <button>Solicitar presupuesto</button>
+          </a>
         </div>
       </Container>
     </section>

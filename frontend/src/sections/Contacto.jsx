@@ -39,6 +39,17 @@ function Contacto() {
         />
         <form onSubmit={handleSubmit} className="contact__form">
           <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="contact__input"
+          />
+
+
+          <input
             type="email"
             name="email"
             placeholder="Tu email"

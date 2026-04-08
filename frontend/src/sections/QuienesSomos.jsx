@@ -19,8 +19,8 @@ function QuienesSomos() {
             entender qué tipo de evento querés hacer y cómo adaptar la propuesta
             a tu espacio.
           </p>
-          <p className="quienes__text">
-            Nuestro servicio es integral: catering, montaje, atención durante el
+          <p>
+            Contamos con 10 años de experiencia en eventos privados, familiares y corporativos. Nuestro servicio es integral: catering, montaje, atención durante el
             evento y limpieza final para que no tengas que preocuparte por nada.
           </p>
           <p className="quienes__text">
