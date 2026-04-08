@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import catering1 from "../assets/stock/catering1.png";
 import catering2 from "../assets/stock/catering2.jpg";
 import catering3 from "../assets/stock/catering3.jpg";
@@ -86,7 +88,9 @@ function Hero() {
         </div>
         <div className="hero__actions">
           <a href="#contacto">
-            <button>Solicitar presupuesto</button>
+            <button>
+              <FontAwesomeIcon icon={faEnvelopeOpen} style={{ marginRight: 8 }} />
+              Solicitar presupuesto</button>
           </a>
         </div>
     </section>

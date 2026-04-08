@@ -15,7 +15,7 @@ function Eventos() {
   }, []);
 
   return (
-    <section className="section">
+    <section id="paquetes" className="section">
       <Container>
         <SectionHeader
           title="Paquetes"
