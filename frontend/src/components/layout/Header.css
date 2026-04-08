@@ -40,16 +40,18 @@
   text-underline-offset: 8px;
 }
 
+.header__link__contacto {
+  font-weight: 700 !important;
+  margin-left: 50px;
+  text-decoration: underline solid var(--color-secondary) 2px !important;
+  text-decoration-inset: 0px !important;
+}
+
 .header a:hover {
   color: var(--color-secondary);
   border-radius: 8px;
   text-decoration-thickness: 2px;
-  text-decoration-inset: -20px;
-
+  text-decoration-inset: -20px !important;
 
   transition: all .5s ease;
-}
-.header__link__contacto {
-  font-weight: 700 !important;
-  margin-left: 50px;
 }
