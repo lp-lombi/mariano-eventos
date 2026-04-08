@@ -78,7 +78,6 @@ function Hero() {
           />
         ) : null}
       </div>
-      <Container>
         <div className={`hero__content ${incomingIndex !== null ? 'hero__content--transitioning' : ''}`}>
           <span className="hero__badge">{current.badge}</span>
           <h1 className="hero__title">
@@ -90,7 +89,6 @@ function Hero() {
             <button>Solicitar presupuesto</button>
           </a>
         </div>
-      </Container>
     </section>
   );
 }
