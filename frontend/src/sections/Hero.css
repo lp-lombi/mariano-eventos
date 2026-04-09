@@ -11,14 +11,13 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  margin: 10px;
 }
 
 .hero__background::after {
   content: "";
   position: absolute;
   inset: 0;
-  box-shadow: 0 0 300px rgba(0,0,0,0.8) inset;
+  box-shadow: 0 0 300px rgba(0, 0, 0, 0.8) inset;
 }
 
 .hero__background-layer {
@@ -32,7 +31,7 @@
 }
 
 .hero__background-layer--incoming {
-  animation: heroFadeIn .5s ease forwards;
+  animation: heroFadeIn 0.5s ease forwards;
 }
 
 @keyframes heroFadeIn {
@@ -50,8 +49,10 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(var(--color-primary) 0%,
-      color-mix(in srgb, var(--color-primary) 10%, transparent) .3%);
+  background: linear-gradient(
+    var(--color-primary) 0%,
+    color-mix(in srgb, var(--color-primary) 10%, transparent) 0.3%
+  );
 }
 
 .hero__content {
@@ -84,11 +85,11 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-
 }
 
 .hero__title {
   font-family: Caldstone;
+  text-align: center;
   margin: 8px 0 0;
   font-size: 4rem;
   line-height: 1.2;
